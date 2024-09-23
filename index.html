@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Amor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #01010F; 
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            max-width: 800px;
+            padding: 30px;
+            border: 2px solid #E0003C; 
+            border-radius: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+        h1 {
+            font-size: 36px;
+            color: #E0003C; 
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+            transition: color 0.3s ease;
+        }
+        h1:hover {
+            color: #fff; 
+        }
+        .letter {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #fff; 
+            white-space: pre-wrap;
+        }
+        .highlight {
+            color: #E0003C; 
+            font-weight: bold;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #fff; 
+            background-color: rgba(255, 255, 255, 0.05); 
+            padding: 10px;
+            border-radius: 5px;
+        }
+        hr {
+            border: 1px solid #E0003C; 
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Feliz 1.4, meu amor ❤</h1>
+        <div class="letter" id="letter"></div>
+        <hr>
+        <footer>
+            <p>Com amor, <span class="highlight">Giovanna Pelati.</span></p>
+        </footer>
+    </div>
+
+    <script>
+        const text = `Quase 490 dias se passaram desde o nosso “pacto”, e é uma loucura olhar para trás e ver tudo o que vivemos juntos. Cada um desses dias me ensinou o que é o verdadeiro significado de relacionamento. Diariamente, conversamos e constantemente aprendemos a compreender e amar um ao outro, e isso me enche de orgulho.\nNão há maior demonstração de amor do que a decisão de persistir em uma relação, mesmo ciente dos desafios que ela traz. A cada momento que compartilho com você, construo e fortaleço uma convicção profunda: a vida foi feita para ser vivida a dois, e você é o motivo de tudo isso.\nEu te amo mais que tudo nessa vida. Sou imensamente grata por toda a compreensão e aprendizado ao longo do nosso caminho.`;
+        const letterElement = document.getElementById('letter');
+        let index = 0;
+
+        function typeLetter() {
+            if (index < text.length) {
+                letterElement.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeLetter, 100); 
+            }
+        }
+
+        window.onload = typeLetter;
+    </script>
+
+</body>
+</html>
